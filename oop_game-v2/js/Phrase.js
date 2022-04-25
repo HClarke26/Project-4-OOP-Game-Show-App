@@ -12,7 +12,7 @@ class Phrase {
         const ul = phraseDiv.querySelector("ul");
 
         for(let i = 0; i < this.phrase.length; i++){
-          
+          // adding a li elemenet with the appropriate class for each letter in the phrase 
             if(this.phrase[i] !== " "){
                 ul.innerHTML += `<li class="hide letter">${this.phrase[i]}</li>`;
             } else {
@@ -31,7 +31,7 @@ class Phrase {
     }
 
     showMatchedLetter(letter) {
-        let letters = ul.children;
+        let letters = document.querySelectorAll('#phrase li');
         for(let i = 0; i < letters.length; i++){
             if(letter === letters[i].textContent){
                 letters[i].classList.remove('hide');

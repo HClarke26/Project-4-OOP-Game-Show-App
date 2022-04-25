@@ -9,3 +9,12 @@ startGameButton.addEventListener('click', () => {
     game = new Game();
     game.startGame();
 })
+
+const qwerty = document.getElementById('qwerty');
+
+qwerty.addEventListener('click', (e) => {
+ if (e.target.tagName === 'BUTTON') {
+     game.handleInteraction(e.target);
+ }
+
+});

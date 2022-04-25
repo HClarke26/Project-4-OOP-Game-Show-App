@@ -32,7 +32,7 @@ class Game {
     checkForWin() {
         const letters = document.querySelectorAll('.letter');
         const shown = document.querySelectorAll('.show')
-        
+        // checks that all letters match
         if(shown.length === letters.length){
             return true;
         } else { 
@@ -82,7 +82,7 @@ class Game {
 
      resetGame() {
         const phraseDiv = document.getElementById("phrase");
-        phraseDiv.querySelector("ul").innerHTML = '';
+        phraseDiv.querySelector("ul").innerHTML = ''; // removing all li elements
 
         this.missed = 0;
         
@@ -91,7 +91,7 @@ class Game {
 
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].disabled = false;
-            buttons[i].classList.remove('chosen');
+            buttons[i].classList.remove('chosen'); // removing styles
             buttons[i].classList.remove('wrong');
         };
 
@@ -99,7 +99,7 @@ class Game {
         
         for (let i = 0; i < hearts.length; i++) {
             let icon = hearts[i].firstElementChild;
-            icon.src = "images/liveHeart.png";        
+            icon.src = "images/liveHeart.png"; // adding hearts back to full       
         };
 
      }
